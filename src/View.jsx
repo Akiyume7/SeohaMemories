@@ -24,7 +24,7 @@ const View = ({
   currentCard,
 }) => (
   <div className="min-h-screen bg-gradient-to-br from-blue-100 via-pink-100 to-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-all duration-1000 relative overflow-hidden">
-    <img src="/background.webp" alt="background" className="fixed inset-0 w-full h-full object-cover object-center z-0 pointer-events-none select-none" style={{ opacity: 0.75 }} draggable="false" />
+    <img src={`${import.meta.env.BASE_URL}background.webp`} alt="background" className="fixed inset-0 w-full h-full object-cover object-center z-0 pointer-events-none select-none" style={{ opacity: 0.75 }} draggable="false" />
     <FloatingParticles isBookView={true} isMobile={isMobile} />
     <TopBar setShowNotebook={setShowNotebook} darkMode={darkMode} setDarkMode={setDarkMode} isMobile={isMobile} />
     <div className="h-20 md:h-24" />

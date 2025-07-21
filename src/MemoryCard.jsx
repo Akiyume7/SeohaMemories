@@ -3,14 +3,14 @@ import { User, Hash, Clock } from 'lucide-react';
 import PageIndicators from './PageIndicators';
 
 const knightImages = [
-  '/knight/little_knight_1.png',
-  '/knight/little_knight_2.png',
-  '/knight/little_knight_3.png',
-  '/knight/little_knight_4.png',
-  '/knight/little_knight_5.png',
-  '/knight/little_knight_6.png',
-  '/knight/little_knight_7.png',
-  '/knight/little_knight_8.png',
+  `${import.meta.env.BASE_URL}knight/little_knight_1.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_2.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_3.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_4.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_5.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_6.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_7.png`,
+  `${import.meta.env.BASE_URL}knight/little_knight_8.png`,
 ];
 
 function getRandomKnights() {
@@ -88,9 +88,9 @@ const MemoryCard = ({ currentCard, filteredCurrentPage, filteredCards, isFlippin
       style={{ willChange: undefined }}
     >
       {/* Card background overlay */}
-      <img src="/Seoha.webp" alt="card overlay" className="absolute inset-0 m-auto w-2/3 h-2/3 object-contain z-0 pointer-events-none select-none opacity-100 animate-sway" style={{ left: '0', right: '0', top: '0', bottom: '0', transformOrigin: 'bottom center' }} draggable="false" />
+      <img src={`${import.meta.env.BASE_URL}Seoha.webp`} alt="card overlay" className="absolute inset-0 m-auto w-2/3 h-2/3 object-contain z-0 pointer-events-none select-none opacity-100 animate-sway" style={{ left: '0', right: '0', top: '0', bottom: '0', transformOrigin: 'bottom center' }} draggable="false" />
       {/* FlyMic overlay, floats to the right of Seoha */}
-      <img src="/FlyMic.png" alt="fly mic" className="absolute z-0 pointer-events-none select-none opacity-90 drop-shadow-lg animate-float-mic" style={{ left: '18%', top: '32%', width: '28%', minWidth: '40px', maxWidth: '90px' }} draggable="false" />
+      <img src={`${import.meta.env.BASE_URL}FlyMic.png`} alt="fly mic" className="absolute z-0 pointer-events-none select-none opacity-90 drop-shadow-lg animate-float-mic" style={{ left: '18%', top: '32%', width: '28%', minWidth: '40px', maxWidth: '90px' }} draggable="false" />
       {knights.map((k, i) => (
         <img
           key={i}
